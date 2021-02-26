@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.content {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.905)), to(rgba(0, 0, 0, 0.898))), url(../img/room.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.905), rgba(0, 0, 0, 0.898)), url(../img/room.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content .logo {
+  width: 70px;
+}
+
+.content nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content nav ul,
+.content nav li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.content nav li {
+  display: inline-block;
+  margin: 0 1em;
+  position: relative;
+}
+
+.content nav li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.content nav li::before {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: red;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.content nav li:hover::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+}
+
+.content .section {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content .section h1 {
+  letter-spacing: 0.7em;
+}
+
+.content .section p {
+  letter-spacing: 0.6em;
+}
+
+.content .section button {
+  width: 200px;
+  font-size: 1em;
+  border: 2px solid red;
+  border-radius: 21px;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.7em 1.5em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.content .section button:not(:last-child) {
+  margin-right: 1em;
+}
+
+.content .section button span {
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.content .section button:hover {
+  border: none;
+}
+
+.content .section button:hover span {
+  width: 100%;
+  border: none;
+}
+/*# sourceMappingURL=index.css.map */
